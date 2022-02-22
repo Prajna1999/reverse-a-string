@@ -1,0 +1,25 @@
+function reverseString(str) {
+let arr=[];
+
+for(let i=0; i<str.length; i++){
+  arr[i]=str.charAt(i);
+}
+// reversing the array.
+let n=arr.length;
+let start=0, end=n-1;
+while(start<end){
+  let temp=arr[start];
+  arr[start]=arr[end];
+  arr[end]=temp;
+  start++;
+  end--;
+}
+// concatenating array elements to form a string.
+let reversedString=""
+for(let i=0; i<n; i++){
+  reversedString+=arr[i]
+
+}
+return reversedString;
+}
+reverseString("hello");
